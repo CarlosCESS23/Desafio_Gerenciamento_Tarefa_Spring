@@ -1,16 +1,16 @@
-spring.application.name=Desafio_gerenc_tarefa
+spring.application.name: Desafio_gerenc_tarefa
 
 # Adicionando o banco de dados de PostgreSQL
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/db_tarefa
-spring.datasource.username=postgres
-spring.datasource.password=1234
-spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.url: jdbc:postgresql://localhost:5432/db_tarefa
+spring.datasource.username: postgres
+spring.datasource.password: 1234
+spring.datasource.driver-class-name: org.postgresql.Driver
 
-# Configuração do JPA e Hibernate
+# Configuracao do JPA e Hibernate
 
-spring.jpa.hibernate.ddl-auto=update # Gerencia automaticamente o esquema do banco de dados
-spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto: update # Gerencia automaticamente o esquema do banco de dados
+spring.jpa.show-sql: true
 
 
 

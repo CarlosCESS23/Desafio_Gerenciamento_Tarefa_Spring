@@ -17,7 +17,19 @@ public class TaskService {
         this.taskRepository = taskRepository;
     }
 
+    //metódo de get que iremos utilizar no Control
     public List<Task> getAll(){
         return taskRepository.findAll(); // A interface de JPA ajuda bastante
     }
+    // Metódo de post que iremos utilizar no Control
+    public Task save(Task task){
+        return taskRepository.save(task);
+    }
+    //metódo de Delete que iremos utilizar no Control
+    public void delete(Long id){
+        taskRepository.deleteById(id);
+        return;
+    }
+
+
 }

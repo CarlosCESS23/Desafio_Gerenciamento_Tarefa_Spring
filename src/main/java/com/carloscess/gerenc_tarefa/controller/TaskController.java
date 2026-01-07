@@ -6,8 +6,7 @@ package com.carloscess.gerenc_tarefa.controller;
 import com.carloscess.gerenc_tarefa.model.Task;
 import com.carloscess.gerenc_tarefa.service.TaskService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +25,13 @@ public class TaskController {
     @GetMapping("")
     public List<Task> getAll(){
         return taskService.getAll();
+    }
+    @PostMapping("")
+    public Task create(@RequestBody Task task){
+        return taskService.save(task);
+    }
+    @DeleteMapping("")
+    public void delete(@RequestBody Long id){
+        taskService.delete(id);
     }
 }
